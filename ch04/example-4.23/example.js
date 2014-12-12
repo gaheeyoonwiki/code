@@ -40,9 +40,9 @@ function animate() {
    }
 }
 
-video.onload = function (e) {
+video.addEventListener('loadeddata', function() {
    video.play();
    window.requestNextAnimationFrame(animate);
-};
+}, false);
 
 alert('This example plays a video, but due to copyright restrictions and size limitations, the video is not included in the code for this example. To make this example work, download a video, and replace the two source elements in example.html to refer to your video.');
